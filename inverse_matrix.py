@@ -69,7 +69,7 @@ def inverse_by_gauss_jordan(matrix):
         while pivot_row < n and aug[pivot_row][col] == 0:
             pivot_row += 1
         if pivot_row == n:
-            raise ValueError("피벗을 찾을 수 없어 역행렬이 존재하지 않습니다.")
+            raise ValueError("행렬식이 0이므로 역행렬이 존재하지 않습니다.")
         aug[col], aug[pivot_row] = aug[pivot_row], aug[col]
 
         pivot = aug[col][col]
